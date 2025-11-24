@@ -13,9 +13,6 @@ W analizowanym projekcie `Quiz-Web-App` zidentyfikowano **2 podatności**, któr
 
 **Identyfikator:** `VUL-A09-001`
 **Poziom ryzyka:** 🟠 **WYSOKI**
-**CWE:** CWE-778: Insufficient Logging
-**CVSS v4.0:** 6.9 (High)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:H/SA:N`
 
 #### 📍 Lokalizacja
 
@@ -83,7 +80,7 @@ Aplikacja pozwala na modyfikację i usuwanie krytycznych danych biznesowych (pyt
 2.  Zapisu w tabeli historycznej (kto, co, kiedy usunął).
 3.  Wersjonowania danych.
 
-#### 💥 Proof of Concept: "Insider Threat" (Sabotaż)
+#### 💥 Proof of Concept: "Insider Threat" 
 
 Zwolniony pracownik posiadający wciąż aktywny token administratora usuwa całą bazę pytań.
 
