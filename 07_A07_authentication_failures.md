@@ -20,8 +20,6 @@ W kontekście aplikacji webowych i API, błędy uwierzytelniania są jednymi z n
 **Identyfikator:** `VUL-A07-001`
 **Poziom ryzyka:** 🔴 **KRYTYCZNY**
 **CWE:** CWE-521: Weak Password Requirements
-**CVSS v4.0:** 7.1 (High)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N`
 
 ##### 📍 Lokalizacja
 
@@ -163,8 +161,6 @@ Hasło przechowywane poprawnie.
 **Identyfikator:** `VUL-A07-002`
 **Poziom ryzyka:** 🔴 **KRYTYCZNY**
 **CWE:** CWE-308: Use of Single-factor Authentication
-**CVSS v4.0:** 8.7 (High)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N`
 
 ##### 📍 Lokalizacja
 

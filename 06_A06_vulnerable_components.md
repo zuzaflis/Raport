@@ -22,8 +22,6 @@ Główne zagrożenia:
 **Identyfikator:** `VUL-A06-001`
 **Poziom ryzyka:** 🔴 **KRYTYCZNY**
 **CWE:** CWE-1390 (Use of Components with Known Vulnerabilities)
-**CVSS v4.0:** 7.3 (High)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L`
 
 ##### 📍 Lokalizacja
 
@@ -104,8 +102,6 @@ Skanowanie `package.json` wykazało **78 podatności**, w tym:
 **Identyfikator:** `VUL-A06-002`
 **Poziom ryzyka:** 🟠 **WYSOKI**
 **CWE:** CWE-1104 (Use of Unmaintained Third Party Components)
-**CVSS v4.0:** 7.3 (High)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L`
 
 ##### 📝 Opis Podatności
 

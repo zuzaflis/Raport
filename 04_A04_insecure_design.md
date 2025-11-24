@@ -26,8 +26,6 @@ Ta kategoria podkreśla znaczenie **Security by Design** i **Secure Development 
 **Identyfikator:** `VUL-A04-001`
 **Poziom ryzyka:** 🟠 **WYSOKI**
 **CWE:** CWE-307 (Improper Restriction of Excessive Authentication Attempts)
-**CVSS v4.0:** 7.1 (High)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N`
 
 ##### 📍 Lokalizacja
 

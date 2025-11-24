@@ -20,8 +20,6 @@ Obejmuje to:
 **Identyfikator:** `VUL-A01-001`
 **Poziom ryzyka:** 🔴 **KRYTYCZNY**
 **CWE:** CWE-306 (Missing Authentication for Critical Function)
-**CVSS v4.0:** 9.1 (Critical)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N`
 
 ##### 📍 Lokalizacja
 
@@ -142,8 +140,6 @@ curl -X GET http://localhost:8080/category/ \
 **Identyfikator:** `VUL-A01-002`
 **Poziom ryzyka:** 🟠 **WYSOKI**
 **CWE:** CWE-639 (Authorization Bypass Through User-Controlled Key)
-**CVSS v4.0:** 8.7 (High)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N`
 
 ##### 📍 Lokalizacja
 
