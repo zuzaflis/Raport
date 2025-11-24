@@ -1,0 +1,15 @@
+11. REKOMENDACJE OGÓLNE
+Poza naprawą zidentyfikowanych podatności, zaleca się wdrożenie systemowych praktyk bezpieczeństwa w celu minimalizacji ryzyka w przyszłości:
+
+11.1. Proces wytwarzania oprogramowania (SSDLC)
+ * Security by Design: Uwzględnianie wymogów bezpieczeństwa i prywatności oraz modelowanie zagrożeń (Threat Modeling) na etapie projektowania.
+ * Standardy kodowania: Regularne szkolenia dla deweloperów (OWASP Top 10), obowiązkowe code review pod kątem bezpieczeństwa oraz pair programming dla funkcji krytycznych.
+ * Automatyzacja testów (CI/CD): Wdrożenie automatycznych skanerów bezpieczeństwa kodu (SAST), aplikacji (DAST), kontenerów oraz zależności (SCA) w potokach wdrożeniowych.
+
+11.2. Infrastruktura i Ochrona
+ * Obrona w głąb (Defense in Depth): Stosowanie WAF, Rate Limitingu oraz ścisłej segmentacji sieci.
+ * Zarządzanie dostępem: Rygorystyczne stosowanie zasady najmniejszych uprawnień (Principle of Least Privilege) dla użytkowników i serwisów.
+
+11.3. Monitoring i Reagowanie na Incydenty
+ * Obserwowalność: Centralizacja logów i monitorowanie zdarzeń bezpieczeństwa (SIEM) z detekcją anomalii i alertowaniem w czasie rzeczywistym.
+ * Incident Response: Posiadanie udokumentowanego planu reagowania na incydenty oraz gotowych procedur (Playbooks) dla typowych scenariuszy ataku.
