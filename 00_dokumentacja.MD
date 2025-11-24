@@ -40,7 +40,6 @@ Podczas audytu stosowano czterostopniową skalę oceny ryzyka podatności:
 ---
 
 ## 3. STRESZCZENIE WYKONAWCZE
-//TODO
 ### 3.1. Podsumowanie wyników
 
 Przeprowadzony audyt bezpieczeństwa aplikacji e-commerce opartej na frameworku NestJS wykazał **liczne krytyczne podatności** stanowiące bezpośrednie zagrożenie dla bezpieczeństwa systemu, danych użytkowników oraz ciągłości działania biznesu.
@@ -50,18 +49,17 @@ Przeprowadzony audyt bezpieczeństwa aplikacji e-commerce opartej na frameworku 
 Aplikacja w obecnym stanie **NIE POWINNA BYĆ WDROŻONA** w środowisku produkcyjnym bez natychmiastowego usunięcia zidentyfikowanych podatności krytycznych i wysokich.
 
 ### 3.2. Statystyki Zidentyfikowanych Podatności
-//TODO
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │           ROZKŁAD PODATNOŚCI WEDŁUG POZIOMU RYZYKA          │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  🔴 KRYTYCZNE:    ████████████████████  10 podatności       │
+│  🔴 KRYTYCZNE:    ████████████████████  7 podatności       │
 │  🟠 WYSOKIE:      ████████████          6 podatności        │
-│  🟡 ŚREDNIE:      ████                  2 podatności        │
-│  🔵 NISKIE:       ██                    1 podatność         │
+│  🟡 ŚREDNIE:      ████                  0 podatności        │
+│  🔵 NISKIE:       ██                    0 podatność         │
 │                                                             │
-│  📊 RAZEM:        19 zidentyfikowanych podatności           │
+│  📊 RAZEM:        13 zidentyfikowanych podatności           │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 
@@ -69,15 +67,15 @@ Aplikacja w obecnym stanie **NIE POWINNA BYĆ WDROŻONA** w środowisku produkcy
 │         ROZKŁAD WEDŁUG KATEGORII OWASP TOP 10 2021          │
 ├─────────────────────────────────────────────────────────────┤
 │  A01 - Broken Access Control               █████  (2)       │
-│  A02 - Cryptographic Failures              █████  (2)       │
-│  A03 - Injection                           █████  (2)       │
-│  A04 - Insecure Design                     █████  (2)       │
+│  A02 - Cryptographic Failures              █████  (4)       │
+│  A03 - Injection                           █████  (0)       │
+│  A04 - Insecure Design                     █████  (1)       │
 │  A05 - Security Misconfiguration           █████  (2)       │
 │  A06 - Vulnerable Components               █████  (2)       │
 │  A07 - Authentication Failures             █████  (2)       │
 │  A08 - Software/Data Integrity Failures    █████  (2)       │
 │  A09 - Logging/Monitoring Failures         █████  (2)       │
-│  A10 - Server-Side Request Forgery         █████  (1)       │
+│  A10 - Server-Side Request Forgery         █████  (0)       │
 └─────────────────────────────────────────────────────────────┘
 ```
 
