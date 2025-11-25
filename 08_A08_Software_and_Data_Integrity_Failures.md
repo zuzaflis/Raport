@@ -1,4 +1,4 @@
-# Raport Analizy Bezpieczeństwa: A08:2021 – Software and Data Integrity Failures
+# A08:2021 – Software and Data Integrity Failures
 
 ## 5.8. A08:2021 – Software and Data Integrity Failures
 
