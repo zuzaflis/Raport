@@ -89,7 +89,7 @@ Atakujący używa znalezionego w kodzie sekretu, aby stworzyć token dla nieistn
 
 const jwt = require('jsonwebtoken');
 
-// 1. Sekret z kodu źródłowego Java (PEŁNY, nieobcięty!)
+// 1. Sekret z kodu źródłowego Java
 const LEAKED_SECRET =
 "20e77bab9dcfb08fa1045a87cf1aefd05f43761b5d4bca7dae3adf22b09ce8710e31abcbca81786886143b960b330cb9f24ad24de7583e9$
 
@@ -101,7 +101,7 @@ const forgedPayload = {
   exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 365) // rok ważności
 };
 
-// 3. Podpisywanie JWT — SECRET to HEX, więc:
+// 3. Podpisywanie JWT
 const token = jwt.sign(forgedPayload, Buffer.from(LEAKED_SECRET, 'hex'));
 
 console.log("\n=== FAŁSZYWY TOKEN ADMINA ===\n");
@@ -132,9 +132,7 @@ private final static String secretKey ="20e77bab9dcfb08fa10..."; // Hardcoded
 
 **Identyfikator:** `VUL-A02-003`
 **Poziom ryzyka:** 🟠 **WYSOKI**
-**CWE:** CWE-319: Cleartext Transmission of Sensitive Information
-**CVSS v4.0:** 7.1 (High)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N`
+
 
 ##### 📍 Lokalizacja
 
@@ -144,9 +142,9 @@ private final static String secretKey ="20e77bab9dcfb08fa10..."; // Hardcoded
 
 Aplikacja przesyła dane (hasła, tokeny) jawnym tekstem przez HTTP.
 
-##### 💥 Proof of Concept: Przechwycenie hasła (Network Sniffing)
+##### 💥 Proof of Concept: Przechwycenie hasła
 
-Atakujący w tej samej sieci Wi-Fi (np. kawiarnia, biuro) uruchamia sniffer pakietów.
+Atakujący w tej samej sieci Wi-Fi uruchamia przechwytywanie pakietów.
 
 **Komenda nasłuchu:**
 
@@ -183,9 +181,6 @@ const AUTH_API = 'http://localhost:8080/api/v1/auth/'; // ❌ HTTP
 
 **Identyfikator:** `VUL-A02-004`
 **Poziom ryzyka:** 🟠 **WYSOKI**
-**CWE:** CWE-200: Exposure of Sensitive Information
-**CVSS v4.0:** 6.9 (Medium)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N`
 
 ##### 📍 Lokalizacja
 
@@ -197,7 +192,7 @@ Publicznie dostępny plik `.sql` ujawnia strukturę bazy danych.
 
 ##### 💥 Proof of Concept: Rekonesans do ataku SQL Injection
 
-Atakujący analizuje plik `exam_portal.sql`, aby znaleźć "najsłabsze ogniwo" lub przygotować precyzyjny atak SQL Injection, nie musząc zgadywać nazw tabel.
+Atakujący analizuje plik `exam_portal.sql`, aby np. przygotować precyzyjny atak SQL Injection, nie musząc zgadywać nazw tabel.
 
 **Analiza pliku:**
 
@@ -217,7 +212,7 @@ CREATE TABLE `users_seq` (
 ```
 
 **Wykorzystanie wiedzy:**
-Wiedząc, że tabela nazywa się `users` a kolumny to `username` i `password`, atakujący może skonstruować payload SQLi (jeśli znalazłby podatność w innej kategorii, np. A03):
+Wiedząc, że tabela nazywa się `users` a kolumny to `username` i `password`, atakujący może skonstruować payload SQLi (jeśli znalazłby podatność w innej kategorii):
 `' UNION SELECT username, password FROM users --`
 
 Zamiast tracić czas na zgadywanie (`users`? `app_users`? `accounts`?), atakujący ma "mapę" systemu.
