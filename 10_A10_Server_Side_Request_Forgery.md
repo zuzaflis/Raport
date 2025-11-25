@@ -12,7 +12,7 @@ Na podstawie analizy kodu backendu (przesłane pliki z `backend/src/main/java/..
 
 ---
 
-### 🔍 WYNIK ANALIZY: Brak funkcjonalności narażonych na SSRF
+### 🔍 PODATNOŚĆ: Brak funkcjonalności narażonych na SSRF
 
 **Identyfikator:** `VUL-A10-001`
 **Poziom ryzyka:** ✅ **NIE STWIERDZONO PODATNOŚCI**
@@ -27,7 +27,7 @@ Na podstawie analizy kodu backendu (przesłane pliki z `backend/src/main/java/..
 * konfiguracja bezpieczeństwa i JWT: `SecurityConfig`, `JwtService`, `JwtAuthenticationFilter`, `ApplicationConfig`,
 * encje i DTO: m.in. `Quiz`, `Question`, `User`, `Result`, `Category`, `QuizRequest`, `QuestionRequest`, `EvalRequest`, `RegisterRequest`, `AuthenticationRequest`.
 
-#### 📝 Opis wyniku
+#### 📝 Opis podatności
 
 W kodzie backendu:
 
