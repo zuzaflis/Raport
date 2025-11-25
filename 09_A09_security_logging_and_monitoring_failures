@@ -34,19 +34,15 @@ Atakujący może wykonać tysiące prób logowania, a administrator przeglądaj�
 ```bash
 #!/bin/bash
 # Próba zalogowania na konto admina błędnym hasłem 50 razy
-for i in {1..150}; do
+for i in {1..50}; do
   curl -X POST http://localhost:8080/api/v1/auth/authenticate \
     -H "Content-Type: application/json" \
     -d '{"username":"admin","password":"wrong_password"}'
 done
 ```
 
-**Wynik w logach serwera:**
+**Wynik w logach serwera:Brak śladu ataku**
 
-```bash
-docker logs quiz-backend-api | grep "BadCredentials"
-# Wynik: Brak śladu ataku
-```
 
 #### ⚠️ Wpływ Biznesowy
 
@@ -60,13 +56,11 @@ docker logs quiz-backend-api | grep "BadCredentials"
 3.  Zaimplementować mechanizm **Rate Limiting** blokujący IP po serii nieudanych prób.
 
 
+
 ### 🔍 PODATNOŚĆ \#2: Brak audytu operacji modyfikujących dane (Audit Trail)
 
 **Identyfikator:** `VUL-A09-002`
 **Poziom ryzyka:** 🔴 **KRYTYCZNY**
-**CWE:** CWE-1191 — Missing Sensitive Operation Audit
-**CVSS v4.0:** 8.7 (High)
-**Wektor:** `CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:H/VA:L/SC:N/SI:H/SA:N`
 
 #### 📍 Lokalizacja
 
@@ -104,6 +98,5 @@ Administrator bazy danych widzi brakujące rekordy, ale **nie jest w stanie usta
 
 #### 🛡️ Rekomendacje Naprawy
 
-1.  **Wdrożenie Hibernate Envers:** Dodanie adnotacji `@Audited` do encji JPA w celu automatycznego wersjonowania rekordów.
-2.  **Implementacja Soft Delete:** Zamiast fizycznego usuwania, oznaczać rekordy flagą `is_deleted = true`.
-3.  **Rejestracja kontekstu:** Zapisywać ID użytkownika wykonującego operację w logach audytowych.
+1.  **Implementacja Soft Delete:** Zamiast fizycznego usuwania, oznaczać rekordy flagą `is_deleted = true`.
+2.  **Rejestracja kontekstu:** Zapisywać ID użytkownika wykonującego operację w logach audytowych.
